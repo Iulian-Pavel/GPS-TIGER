@@ -1,0 +1,73 @@
+@import "../../_general";
+@import url("https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&display=swap");
+
+.card-header {
+    text-align: center;
+    padding: 0.625em;
+    font-size: 2em;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-family: 'Raleway', sans-serif;
+}
+
+.price-cards {
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  .price-card {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    border-radius: 10px;
+    transition: 150ms ease-in-out;
+    .desc {
+      background-color: #ffd200;
+      font-size: 1.2em;
+      padding: 1em;
+      border-radius: 10px 10px 0 0;
+    }
+    .price {
+      background-color: #fddf55;
+      padding: 1.25em;
+      font-size: 1.2em;
+      .card-price {
+          font-weight: bold;
+          font-size: 4em;
+      }
+    }
+    .price-description {
+      background-color: #ffd200;
+      border-radius: 0 0 10px 10px;
+      padding: 2.25em;
+      display: flex;
+      flex-direction: column;
+      .price-button {
+        border: none;
+        outline: none;
+        background: none;
+        color: #000;
+        border: 2px solid #000;
+        padding: 0.625em;
+        margin-top: 2%;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+        &:hover {
+          transform: scale(1.10);
+        }
+      }
+    }
+    &:hover { //price card
+      box-shadow: 5px 10px 8px 10px #888888;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+    .price-cards {
+        flex-direction: column;
+        width: 100%;
+        .price-card {
+            margin-top: 5%;
+        }
+    }
+}
