@@ -15,6 +15,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @include displayFlex(flex, space-around, center, 0);
   .price-card {
     text-align: center;
     font-family: "Raleway", sans-serif;

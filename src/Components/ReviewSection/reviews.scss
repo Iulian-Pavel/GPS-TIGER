@@ -1,14 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&display=swap");
 
 .reviews {
+  @include displayFlex(flex, space-between, center, column);
   width: 100%;
   height: 100%;
   background-color: #000;
   font-family: "Raleway", sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
   padding: 3.25em;
   h1 {
     color: white;
@@ -17,10 +14,8 @@
 }
 
 .review-section {
+  @include displayFlex(flex, space-around, center, 0);
   width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   .review-card {
     width: 25%;
     text-align: center;
@@ -44,6 +39,7 @@
 @media only screen and (max-width: 1000px) {
     .review-section {
         flex-direction: column;
+        @include displayFlex(0, 0, 0, column);
         .review-card {
             width: 100%;
             margin-bottom: 10%;

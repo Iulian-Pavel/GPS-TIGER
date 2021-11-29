@@ -1,21 +1,14 @@
 @import "../../_general";
 
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include displayFlex(flex, center, center, column);
   background-color: black;
   .upper-footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include displayFlex(flex, space-around, center, 0);
     width: 100%;
     .social-links {
       color: black;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
+      @include displayFlex(flex, space-around, center, 0);
       width: 20%;
       li {
         list-style: none;
@@ -38,16 +31,11 @@
 }
 
 .lower-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayFlex(flex, center, center, column);
   width: 100%;
   margin-top: 2%;
-  flex-direction: column;
   .footer-links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include displayFlex(flex, space-around, center, 0);
     width: 30%;
     li {
       list-style: none;
@@ -60,10 +48,7 @@
     }
   }
   .disclaimers {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    @include displayFlex(flex, space-around, center, column);
     p {
       color: #fff;
       font-family: sans-serif;
@@ -81,7 +66,7 @@
 
 @media only screen and (max-width: 1000px) {
   .upper-footer {
-    flex-direction: column;
+    @include displayFlex(0, 0, 0, column);
     padding: 3.24em;
     .social-links {
       width: 100% !important;
@@ -93,7 +78,7 @@
   }
   .lower-footer {
     .footer-links {
-      flex-direction: column;
+      @include displayFlex(0, 0, 0, column);
       height: 20vh;
     }
   }

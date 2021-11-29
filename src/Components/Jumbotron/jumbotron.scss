@@ -2,18 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&display=swap");
 
 .jumbotron {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include displayFlex(flex, center, center, column);
   padding: 2.75em;
   font-family: "Raleway", sans-serif;
   background-color: #F7F7F7;
   .text {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    @include displayFlex(flex, center, flex-start, column);
     width: 100%;
     .j-paragraph {
       font-size: 1.5em;
@@ -21,17 +15,12 @@
     }
   }
   .cards {
+    @include displayFlex(flex, space-around, center, 0);
     margin-top: 5%;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     .card {
+      @include displayFlex(flex, space-between, flex-start, column);
       padding: 2em;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-direction: column;
       box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 50%);
       .card-desc {
         margin-top: 15%;
@@ -58,6 +47,7 @@
   .cards {
     flex-direction: column;
     justify-content: space-around;
+    @include displayFlex(0, space-around, 0, column);
     .card {
       margin-top: 15%;
     }

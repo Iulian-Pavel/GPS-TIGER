@@ -14,29 +14,18 @@
 }
 
 .services {
+    @include displayFlex(flex, center, center, column);
     padding: 2.25em;
     background-color: #F7F7F7;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     .services-heading {
         font-family: 'Raleway', sans-serif;
     }
     .service-cards {
-        // border: 1px solid blue;
+        @include displayFlex(flex, space-between, center, 0);
         width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         .service-card {
-            // border: 1px solid black;
-            // width: 50%;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-direction: column;
+            @include displayFlex(flex, space-between, flex-start, column);
             padding: 3.25em;
             background-color: white;
             margin: 5% 2% 0 0;
@@ -90,6 +79,6 @@
 
 @media only screen and (max-width: 1000px) {
     .service-cards {
-        flex-direction: column;
+        @include displayFlex(0, 0, 0, column);
     }
 }

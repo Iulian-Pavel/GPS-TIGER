@@ -2,24 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&display=swap');
 
 .showcase {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include displayFlex(flex, center, center, column);
   width: 100%;
   .gps-platform {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    @include displayFlex(flex, space-around, center, 0);
     width: 100%;
     margin-bottom: 5%;
     padding: 2.37em;
-    // color: #eeeeee;
     .text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      @include displayFlex(flex, center, flex-start, column);
       font-family: 'Raleway', sans-serif;
       line-height: 2em;
       font-weight: 600;
@@ -43,6 +34,6 @@
 
 @media only screen and (max-width: 1280px) {
     .gps-platform {
-        flex-direction: column;
+        @include displayFlex(0, 0, 0, column);
     }
 }

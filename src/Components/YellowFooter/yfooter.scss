@@ -1,19 +1,12 @@
 @import '../../_general';
 
 .y-footer {
+    @include displayFlex(flex, space-around, center);
     width: 100%;
-    // border: 1px solid red;
     margin-top: 5%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: #FFD200;
     .y-section {
-        // border: 1px solid blue;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        @include displayFlex(flex, center, center, column);
         padding: 30px;
         font-family: sans-serif;
         width: 18%;
@@ -31,7 +24,7 @@
 
 @media only screen and (max-width: 1000px) {
     .y-footer {
-        flex-direction: column;
+        @include displayFlex(0, 0, 0, column);
         .y-section {
             width: 100%;
         }

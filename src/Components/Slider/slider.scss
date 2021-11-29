@@ -2,10 +2,7 @@
 @import "react-slideshow-image/dist/styles.css";
 
 .each-slide > div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  @include displayFlex(flex, center, flex-start, column);
   height: 80vh;
   background-size: cover;
   background-repeat: no-repeat;
