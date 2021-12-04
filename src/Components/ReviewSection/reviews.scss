@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu&display=swap");
+@import '../../_general';
 
 .reviews {
   @include displayFlex(flex, space-between, center, column);
