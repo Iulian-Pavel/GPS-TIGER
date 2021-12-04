@@ -80,6 +80,7 @@ class PriceCards extends React.Component {
             </div>
           </div>
         </div>
+        <br />
       </>
     );
   }
