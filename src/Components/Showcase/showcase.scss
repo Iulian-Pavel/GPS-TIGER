@@ -35,5 +35,11 @@
 @media only screen and (max-width: 1280px) {
     .gps-platform {
         @include displayFlex(flex, center, center, column);
+        .image {
+          img {
+            position: relative;
+            left: 2%;
+          }
+        }
     }
 }

@@ -34,7 +34,7 @@ class YFooter extends React.Component {
                     <a href="#">Hanzeweg 43-B</a>
                     <a href="#">7418 AV Deventer</a>
                     <a href="#">Nederland</a>
-                    <a href="#">TEL: +31 (0)88 321 2000</a>
+                    <a href="#">TEL: <br /> +31 (0)88 321 2000</a>
                     <a href="#">KVK 83104984</a>
                 </div>
                 <div className="gastiger-gmbh y-section">

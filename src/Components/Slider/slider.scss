@@ -40,4 +40,19 @@
   background-color: #ffd200;
   font-size: 2vw;
   font-weight: bold;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .each-slide .slider-header {
+    font-size: 6vw;
+  }
+
+  .slider-paragraph {
+    font-size: 3vw;
+  }
+
+  .client-button {
+    font-size: 4vw;
+  }
 }
